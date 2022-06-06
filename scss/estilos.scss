@@ -1,0 +1,42 @@
+@import"../node_modules/bootstrap/scss/bootstrap";
+
+
+* {
+    margin:  0;
+    padding: 0;
+}
+.background-img {
+    background-image: url(../img/q5.jpg);
+    background-size: cover;  
+    opacity: 80%;
+}
+body {
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+                a {
+                    text-decoration: none;
+                    font-family: 'Roboto'; color: rgb(8, 8, 8); 
+                    font-weight: bold;
+                    font-size: 18px;
+                    font-style: inherit;
+                    justify-content: space-around;        
+                }    
+            } 
+            h5 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }                            
+        p {
+            font-family: 'Roboto';
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 200px;
+            margin-right: 50px;
+            margin-left: 50px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+}

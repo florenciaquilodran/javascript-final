@@ -1,0 +1,38 @@
+[
+    
+    {"signo": "Aries", 
+        "dato": "Es el fuego que inicia, que irrumpe, que quema pronto y pronto se apaga. Furia, ira, actividad, acción."
+    },
+    {"signo": "Tauro", 
+        "dato": "La tranquilidad del hogar, mirar una pelicula en el sillón con una rica comida."
+    },
+    {"signo": "Géminis", 
+        "dato": "Alegría, diversión, estudiar de manera constante, tener muchos amigos por todos lados."
+    },
+    {"signo": "Cáncer", 
+        "dato": "La familia es lo primero, el cobijo fundamental, la Madre es lo mas importante."
+    },
+    {"signo": "Leo", 
+        "dato": "Soy el lider, el rey de la manada, todos me siguen de manera espontanea."
+    },
+    {"signo": "Virgo", 
+        "dato": "Necesito cuidar de manera meticulosa mi cuerpo, saber como actua."
+    },
+    {"signo": "Libra", 
+        "dato": "Equilibrio entre ambas partes, sere el mediador."
+    },
+    {"signo": "Escorpio", 
+        "dato": "Purgar. Sacar al exterior todo aquello que se pudre dentro mio. Renacer."
+    },
+    {"signo": "Sagitario", 
+        "dato": "Viajar, explorar, divertirme, hablar otros idiomas, ser maestro, el sabio."
+    },
+    {"signo": "Capricornio", 
+        "dato": "Trabajar dia y noche sin parar para lograr mis cometidos."
+    },
+    {"signo": "Piscis", 
+        "dato": "Amor total para con toda la humanidad."
+    }
+
+    
+]
