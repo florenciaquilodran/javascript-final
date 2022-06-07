@@ -2,7 +2,7 @@
 // Alumna : Florencia Quilodrán
 
 
-//Sweet Alert
+//Sweet Alert con Swal Fire
 
 Swal.fire({
     title: 'Aprendamos sobre los Signos',     
