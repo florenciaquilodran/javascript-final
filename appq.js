@@ -1,12 +1,17 @@
-//using selectors inside the element
+// Entrega final de Javascript - CoderHouse año 2022, mes junio. Comisión 30335. Profesor : Rodrigo Río del Val.
+// Alumna : Florencia Quilodrán
+
+//Utilizando selectores dentro de elemento
+//Utilizando DOM
+
 const preguntas = document.querySelectorAll(".pregunta");
 
 preguntas.forEach(function (pregunta) {
   const btn = pregunta.querySelector(".pregunta-btn");
-  // console.log(btn);
+  console.log(btn);
 
   btn.addEventListener("click", function () {
-    // console.log(pregunta);
+    console.log(pregunta);
 
     preguntas.forEach(function (item) {
       if (item !== pregunta) {
@@ -17,14 +22,3 @@ preguntas.forEach(function (pregunta) {
     pregunta.classList.toggle("show-text");
   });
 });
-
-// traversing the dom
-// const btns = document.querySelectorAll(".question-btn");
-
-// btns.forEach(function (btn) {
-//   btn.addEventListener("click", function (e) {
-//     const question = e.currentTarget.parentElement.parentElement;
-
-//     question.classList.toggle("show-text");
-//   });
-// });
