@@ -40,12 +40,24 @@
         <p class="container mt-5">En esta pequeña sección te mostramos cualidades de los doce signos.
             Apretá el botón y tomá nota !.</p>
 
-        <button type="button" class="btn btn-secondary m-0" onclick="generarDatoAstrologico();" style="color: rgb(232, 210, 232);">Astro Dato</button>
+        <button id="btnPrincipal" type="button" class="btn btn-secondary m-0" onclick="generarDatoAstrologico();" style="color: rgb(232, 210, 232);">Astro Dato</button>
         <p id="fraseOutput" class="m-3 p-3"></p>
         <p id="signoOutput" class="m-3 p-3"></p>
+
+        
         
     </div>
     
+    <div class="container m-10 p-10">
+        <h4 class="m-5 p-0">Guarda de referencia a alguien que conozcas con las caracteristicas de estos signos.</h4>
+        <label for="uname">Ingresá el nombre de la persona: </label>
+        <input type="text" id="uname" name="name" required>
+        <span class="validity"></span>
+        <button>Guardar Persona</button>
+    </div>
+    <div>
+        <button>Ver Personas Guardadas</button>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

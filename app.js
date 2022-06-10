@@ -40,8 +40,8 @@ fetch("https://florenciaquilodran.github.io/javascript-final/javascript.json")
 
 // En esta función a través del random me eligirá una frase de forma aleatoria que cada vez que se clickee el botón expresado en el html funcionará
 
-            function generarDatoAstrologico() {
-                const random = Number.parseInt(Math.random() * arraySignos.length -1);
-                document.querySelector('#fraseOutput').textContent = `"${arraySignos[random].dato.dato}"`;
-                document.querySelector('#signoOutput').textContent = `${arraySignos[random].dato.signo}.-`;
-            }
+        function generarDatoAstrologico() {
+        const random = Number.parseInt(Math.random() * arraySignos.length -1);
+        document.querySelector('#fraseOutput').textContent = `"${arraySignos[random].dato.dato}"`;
+        document.querySelector('#signoOutput').textContent = `${arraySignos[random].dato.signo}.-`;
+            } 
