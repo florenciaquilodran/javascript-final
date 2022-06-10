@@ -45,3 +45,14 @@ fetch("https://florenciaquilodran.github.io/javascript-final/javascript.json")
         document.querySelector('#fraseOutput').textContent = `"${arraySignos[random].dato.dato}"`;
         document.querySelector('#signoOutput').textContent = `${arraySignos[random].dato.signo}.-`;
             } 
+
+
+// En esta función se puede guardar lo que salió del signo y asignarlo a un nombre de alguien que conozcamos
+
+let nombrePersonaInput = document.querySelector("#uname");
+
+const botonGuardarPersona = document.querySelector("#botonGuardarPersona");
+botonGuardarPersona.addEventListener("click", () => {
+    localStorage.setItem(`${nombrePersonaInput.value}`, `${document.querySelector('#signoOutput').textContent}: ${document.querySelector('#fraseOutput').textContent}`);
+});
+
