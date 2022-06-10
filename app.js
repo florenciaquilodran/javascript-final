@@ -1,3 +1,5 @@
+
+
 // Entrega final de Javascript - CoderHouse año 2022, mes junio. Comisión 30335. Profesor : Rodrigo Río del Val.
 // Alumna : Florencia Quilodrán
 
@@ -40,10 +42,16 @@ fetch("https://florenciaquilodran.github.io/javascript-final/javascript.json")
 
 // En esta función a través del random me eligirá una frase de forma aleatoria que cada vez que se clickee el botón expresado en el html funcionará
 
+let signoSeleccionado,
+    datoSignoSeleccionado;
+
         function generarDatoAstrologico() {
         const random = Number.parseInt(Math.random() * arraySignos.length -1);
-        document.querySelector('#fraseOutput').textContent = `"${arraySignos[random].dato.dato}"`;
-        document.querySelector('#signoOutput').textContent = `${arraySignos[random].dato.signo}.-`;
+        signoSeleccionado = arraySignos[random].dato.signo;
+        datoSignoSeleccionado = arraySignos[random].dato.dato;
+
+        document.querySelector('#fraseOutput').textContent = `"${datoSignoSeleccionado}"`;
+        document.querySelector('#signoOutput').textContent = `${signoSeleccionado}.-`;
             } 
 
 
@@ -53,6 +61,36 @@ let nombrePersonaInput = document.querySelector("#uname");
 
 const botonGuardarPersona = document.querySelector("#botonGuardarPersona");
 botonGuardarPersona.addEventListener("click", () => {
-    localStorage.setItem(`${nombrePersonaInput.value}`, `${document.querySelector('#signoOutput').textContent}: ${document.querySelector('#fraseOutput').textContent}`);
+    localStorage.setItem(`${nombrePersonaInput.value}`, JSON.stringify(`${signoSeleccionado}: ${datoSignoSeleccionado}`));
 });
 
+
+
+// para mostrar los nombres y sus signos guardados del localStorage
+
+const botonMostrarHistorial = document.querySelector("#botonMostrarHistorial");
+let contenidoModal = document.querySelector("#contenidoModal");
+
+ const mostrarNombresGuardados = () => {
+    let nombresCompleto = [];
+    keysNombres = Object.keys(localStorage);
+    valuesNombres= Object.values(localStorage);
+    i = keysNombres.length;
+    contenidoModal.innerHTML=``;
+
+    for (let index = 0; index < i; index++) {
+        nombresCompleto.push({"nombre":keysNombres[index], "signo":valuesNombres[index]});
+    }
+
+    nombresCompleto.forEach(nombre => {
+        contenidoModal.innerHTML += `<div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">${nombre.nombre}</h5>
+          <p class="card-text">${nombre.signo}</p>
+        </div>
+      </div>`;
+
+    })
+}
+
+botonMostrarHistorial.addEventListener("click", mostrarNombresGuardados);
